@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  devise_for :users
+
+  root to: 'home#registration'
+
+  get 'home', to: 'home#index', as: :home
+  get 'home/registration'
+  post 'home/complete_registration'
 
   resources :todos, only: [:index, :create] do
     post :toggle, on: :member

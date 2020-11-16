@@ -1,19 +1,17 @@
 # == Schema Information
 #
-# Table name: todos
+# Table name: user_points
 #
 #  id         :integer          not null, primary key
-#  completed  :boolean          default(FALSE)
-#  title      :string
+#  points     :integer          default(0), not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  user_id    :integer          not null
 #
+require 'test_helper'
 
-one:
-  title: MyString
-  completed: false
-
-two:
-  title: MyString
-  completed: false
+class UserPointTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end
