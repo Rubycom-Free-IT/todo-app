@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <%= render 'shared/nav' %>
+    <%= render 'shared/alert', text: notice, type: :info %>
+    <%= render 'shared/alert', text: alert, type: :warning %>
+
     <div class="container">
       <div class="row">
         <div class="col-md-6 offset-md-3">
@@ -18,8 +22,5 @@
         </div>
       </div>
     </div>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
   </body>
 </html>

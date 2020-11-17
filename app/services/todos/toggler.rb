@@ -15,18 +15,10 @@ class Todos::Toggler
         user = todo.user
         user.user_point.update(points: user.user_point.points + TODO_PRICE)
       end
-
-      some_error
     end
 
-    todo
+    true
   rescue StandardError => e
     false
-  end
-
-  private
-
-  def some_error
-    raise 'a'
   end
 end

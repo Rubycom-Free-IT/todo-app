@@ -8,7 +8,7 @@ const TodoApp = () => {
   const [todos, setTodos] = useState([])
 
   useEffect(() => {
-    fetch('/todos').then((response) => {
+    fetch('/api/todos').then((response) => {
         return response.json();
       })
       .then((data) => {
@@ -17,7 +17,7 @@ const TodoApp = () => {
   }, []);
 
   const handleChange = (item) => {
-    fetch(`/todos/${item.id}/toggle`,
+    fetch(`/api/todos/${item.id}/toggle`,
       {
         method: 'POST',
         headers: {
@@ -37,7 +37,7 @@ const TodoApp = () => {
     let target = event.target
 
     if (event.key === 'Enter') {
-      fetch(`/todos`,
+      fetch(`/api/todos`,
         {
           method: 'POST',
           headers: {

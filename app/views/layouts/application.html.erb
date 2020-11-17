@@ -11,9 +11,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'shared/nav' %>
+    <%= render 'shared/alert', text: notice, type: :info %>
+    <%= render 'shared/alert', text: alert, type: :warning %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= alert %>
+
+    <%= yield %>
   </body>
 </html>

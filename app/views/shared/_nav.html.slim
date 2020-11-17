@@ -1,0 +1,15 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  = link_to 'Todo App', root_path, class: 'navbar-brand'
+  button.navbar-toggler aria-controls="navbarNav" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarNav" data-toggle="collapse" type="button"
+    span.navbar-toggler-icon
+  #navbarNav.collapse.navbar-collapse
+    ul.navbar-nav
+      li.nav-item
+        = link_to 'Todos', todos_path, class: 'nav-link'
+      li.nav-item
+        - if current_user
+          = link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link'
+        - else
+          = link_to 'Registration', home_registration_path, class: 'nav-link'
+
+
