@@ -9,11 +9,11 @@
 #  updated_at :datetime         not null
 #  user_id    :integer          not null
 #
+FactoryBot.define do
+  factory :todo do
+    sequence(:title) { |n| "Task #{n}" }
+    completed { false }
 
-one:
-  title: MyString
-  completed: false
-
-two:
-  title: MyString
-  completed: false
+    association :user
+  end
+end

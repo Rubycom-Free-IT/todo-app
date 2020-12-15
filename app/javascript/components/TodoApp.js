@@ -65,11 +65,11 @@ const TodoApp = () => {
   return (
     <div className="container mt-5">
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-6 in-progress-todos">
           <InProgress items={ filterTodos(todos, false) } handleChange={ handleChange } handleNewTodo={ handleNewTodo } />
         </div>
 
-        <div className="col-md-6">
+        <div className="col-md-6 completed-todos">
           <Completed items={ filterTodos(todos, true) } handleChange={ handleChange } />
         </div>
       </div>

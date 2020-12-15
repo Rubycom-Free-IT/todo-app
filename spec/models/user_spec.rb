@@ -16,10 +16,12 @@
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
-require 'test_helper'
+require 'rails_helper'
 
-class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+RSpec.describe User, type: :model do
+  let(:user) { build(:user) }
+
+  it 'should be valid' do
+    expect(user).to be_valid
+  end
 end
