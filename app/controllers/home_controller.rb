@@ -12,7 +12,7 @@ class HomeController < ApplicationController
     @user = NewUser.new(params.require(:new_user).permit(:email, :password, :starting_points))
 
     if @user.save
-      redirect_to home_path
+      redirect_to todos_path
     else
       render :registration, layout: 'devise'
     end
