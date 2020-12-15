@@ -10,7 +10,7 @@ set :rvm_type, :user
 set :rvm_ruby_version, '2.6.3@todo-app'
 
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
-append :linked_files, "config/master.key"
+append :linked_files, "config/master.key", "db/production.sqlite3"
 
 set :keep_releases, 10
 
